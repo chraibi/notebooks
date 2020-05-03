@@ -1,36 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<geometry version="0.8" caption="second life" unit="m" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://134.94.2.137/jps_geoemtry.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<geometry version="0.8" caption="corner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xsd.jupedsim.org/jps_geometry.xsd" unit="m">
     <rooms>
         <room id="0" caption="floor">
             <subroom id="1" caption="dummy_caption" class="Office" A_x="0" B_y="0" C_z="0">
-                <polygon caption="wall" type="wall">
-                    <vertex px="0" py="0" />
-                    <vertex px="8" py="0" />
+                <polygon caption="wall">
+                    <vertex px="0" py="0"/>
+                    <vertex px="8" py="0"/>
                 </polygon>
-                <polygon caption="wall" type="wall">
-                    <vertex px="8" py="5" />
-                    <vertex px="0" py="5" />
+                <polygon caption="wall">
+                    <vertex px="8" py="5"/>
+                    <vertex px="0" py="5"/>
                 </polygon>
-                <polygon caption="wall" type="wall">
-                    <vertex px="0" py="5" />
-                    <vertex px="0" py="0" />
+                <polygon caption="wall">
+                    <vertex px="0" py="5"/>
+                    <vertex px="0" py="0"/>
                 </polygon>
-                <polygon caption="wall" type="internal">
-                    <vertex px="8" py="0" />
-                    <vertex px="8" py="2" />
+                <polygon caption="wall">
+                    <vertex px="8" py="0"/>
+                    <vertex px="8" py="2"/>
                 </polygon>
-                <polygon caption="wall" type="internal">
-                    <vertex px="8" py="5" />
-                    <vertex px="8" py="3" />
+                <polygon caption="wall">
+                    <vertex px="8" py="5"/>
+                    <vertex px="8" py="3"/>
                 </polygon>
             </subroom>
-            <crossings />
+            <subroom id="2" caption="Room 2" class="Not specified" A_x="0" B_y="0" C_z="0">
+                <polygon caption="wall">
+                    <vertex px="8" py="0"/>
+                    <vertex px="8" py="2"/>
+                </polygon>
+                <polygon caption="wall">
+                    <vertex px="8" py="5"/>
+                    <vertex px="8" py="3"/>
+                </polygon>
+                <polygon caption="wall">
+                    <vertex px="8" py="5"/>
+                    <vertex px="11" py="5"/>
+                </polygon>
+                <polygon caption="wall">
+                    <vertex px="8" py="0"/>
+                    <vertex px="11" py="0"/>
+                </polygon>
+            </subroom>
+            <crossings>
+                <crossing id="0" subroom1_id="1" subroom2_id="2">
+                    <vertex px="8" py="2"/>
+                    <vertex px="8" py="3"/>
+                </crossing>
+            </crossings>
         </room>
     </rooms>
     <transitions>
-        <transition id="0" caption="exit" type="emergency" room1_id="0" subroom1_id="1" room2_id="-1" subroom2_id="-1">
-            <vertex px="8" py="2" />
-            <vertex px="8" py="3" />
+        <transition id="0" caption="exit" type="emergency" room1_id="0" subroom1_id="2" room2_id="-1" subroom2_id="-1">
+            <vertex px="11" py="5"/>
+            <vertex px="11" py="0"/>
         </transition>
     </transitions>
+    <Undefine/>
 </geometry>
