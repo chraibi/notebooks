@@ -1,5 +1,4 @@
-#vislib
-
+from __future__ import print_function
 import os
 import re
 import glob
@@ -31,6 +30,11 @@ from IPython.display import HTML
 from utils import * 
 # vis
 import vislib
+
+
+from ipywidgets import interact, interactive, fixed, interact_manual
+import ipywidgets as widgets
+from ipywidgets import IntSlider
 
 
 
